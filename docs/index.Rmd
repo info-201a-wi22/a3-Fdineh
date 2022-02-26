@@ -1,0 +1,52 @@
+---
+title: "Incarceration"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(areaplot)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library("plotly")
+library("dplyr")
+library("tidyr")
+library("stringr")
+library(maps)
+library(tidyverse)
+library(mapproj)
+library(knitr)
+```
+
+## Introduction
+When I read the incarceration data, I wanted to focus on the black and white females in prison. I concentrate on Washington state because I'm from there. I wanted to figure out if the white female population in Washington was similar, higher, or lower than the black female population. Suppose the bias or racism in Washington changed from 1988 to 2018 and that black and white female populations were not that far apart in the chart. In my Summary information I wanted to find the total female prison population from 1988 to 2016 and the data said that 23006. I also wanted to know what was the total black female population and white female population and the difference between them. The total black female population had 5064 and the white female population had 17942 and the difference between them is 12878. I also wanted to know what county had the highest prison population and it was King County. 
+
+
+
+## Trends over time chart
+I was able to find the total of black and white females in prison by adding them together and creating a separate column for that. Since I already had the year, I included that in my chart, and my x-axis was the years from 1970 to 2018, and my y-axis was the total black and white female prison population. From the chart, you can see that 2004 that the highest number of black and white female prisons out of all the years.
+
+```{r trend, echo=FALSE, warning= FALSE, message=FALSE}
+source("../source/analysis.R")
+x
+```
+
+
+## Chart
+For my chart, I wanted to compare the black and white female prison populations, see which race had the highest prison rate, and see if the numbers are closer. My x-axis was the white female prison population, and my y-axis was the black female prison population, and the colors are based on the years. From my graph, I could tell that the white female prison population had the highest arrest.
+
+```{r chart, echo=FALSE, warning= FALSE, message=FALSE}
+source("../source/analysis.R")
+y
+```
+
+## Map
+Since my data was focused on the female prison population in Washington state I wanted to create my map on that. I created two maps to show the black female prison population and the white female prison population in 2016 to see the difference. The black female prison population had more blank places then the white female prison population in 2016. In the map you could see that in King county the black female prison population has a huge population. 
+
+```{r map, echo=FALSE, warning= FALSE, message=FALSE}
+source("../source/analysis.R")
+yd_wa
+ja_wa
+```
+
